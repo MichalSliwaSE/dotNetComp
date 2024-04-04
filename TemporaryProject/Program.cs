@@ -5,7 +5,7 @@ app.MapGet("/", () => "Hello World!");
 
 
 string test = "test";
-string test1 = "first";
+string test1 = "main";
 Console.WriteLine(test);
 
 
