@@ -4,6 +4,9 @@ var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 
 
+string test = "test";
+string fewcfew = "first";
+Console.WriteLine(test);
 
 // Define route for handling math operations
 app.MapGet("/calculate", async context =>
