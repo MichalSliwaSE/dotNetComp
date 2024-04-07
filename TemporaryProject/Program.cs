@@ -1,9 +1,15 @@
+using TemporaryProject;
+
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
-
+Dog dog = new Dog();
+dog.age = 22;
+dog.name = "jess";
+Console.WriteLine(dog.GetAgeAndName());
+dog.PrintDogsAges();
 string test = "test";
 string fewcfew = "first";
 Console.WriteLine(test);
@@ -67,5 +73,6 @@ app.MapGet("/calculate", async context =>
         await context.Response.WriteAsync("Error: Missing query parameters.");
     }
 });
+
 
 app.Run();
