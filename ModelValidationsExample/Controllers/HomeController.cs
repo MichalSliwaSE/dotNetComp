@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ModelValidationsExample.CustomBinders;
 using ModelValidationsExample.Models;
 
 namespace ModelValidationsExample.Controllers;
@@ -6,7 +7,12 @@ namespace ModelValidationsExample.Controllers;
 public class HomeController : Controller
 {
     [Route("register")]
-    public IActionResult Index(Person person)
+    public IActionResult Index(
+        // [Bind(nameof(Person.PersonName), nameof(Person.Email), nameof(Person.Password),
+        //     nameof(Person.RepeatPassword))]
+        // [FromBody]
+        // [ModelBinder(BinderType = typeof(PersonModelBinder))] 
+        Person person)
     {
         if (!ModelState.IsValid)
         {
@@ -16,6 +22,7 @@ public class HomeController : Controller
             string errors = string.Join("\n", errorsList);
             return BadRequest(errors);
         }
+
         return Content($"{person}");
     }
 }

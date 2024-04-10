@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IActionResultExample", "IAc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelValidationsExample", "ModelValidationsExample\ModelValidationsExample.csproj", "{DCA991A4-9E8A-4876-8F4D-959646DB3B44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewsExample", "ViewsExample\ViewsExample.csproj", "{9B8D0706-E3FF-4803-9EF5-9507734015FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{DCA991A4-9E8A-4876-8F4D-959646DB3B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCA991A4-9E8A-4876-8F4D-959646DB3B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCA991A4-9E8A-4876-8F4D-959646DB3B44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8D0706-E3FF-4803-9EF5-9507734015FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8D0706-E3FF-4803-9EF5-9507734015FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8D0706-E3FF-4803-9EF5-9507734015FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8D0706-E3FF-4803-9EF5-9507734015FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
