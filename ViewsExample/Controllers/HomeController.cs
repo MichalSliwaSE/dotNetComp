@@ -4,7 +4,8 @@ namespace ViewsExample.Controllers;
 
 public class HomeController : Controller
 {
-    // GET
+    [Route("home")]
+    [Route("/")]
     public IActionResult Index()
     {
         return View();

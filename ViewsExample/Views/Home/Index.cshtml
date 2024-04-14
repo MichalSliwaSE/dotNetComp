@@ -1,18 +1,38 @@
-
+@using ViewsExample.Models
 
 @{
+    string appTitle = "Asp.Net Demo";
+    Person person = new Person()
+    {
+        Name = "John",
+        DateOfBirth = null
+        // DateOfBirth = Convert.ToDateTime("2000-07-01")
+    };
+
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>huihuhui</title>
+    <title>@appTitle</title>
 </head>
 <body>
 <div>
-    <h1>Welcome to My Razor Page!</h1>
-    <p>This is a sample Razor Page content.</p>
+    <h1>Welcome @person.Name</h1>
+    <p>What is up @person.Name. You were born @person.DateOfBirth</p>
+    @if (person.DateOfBirth.HasValue)
+    {
+        double ageInYears = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays / 365.25);
+        double ageInDays = (DateTime.Now - person.DateOfBirth).Value.TotalDays;
+
+        <p>It has been @ageInDays days since you were born</p>
+        <p>You are @ageInYears years old.</p>
+    }
+    else
+    {
+        <h3>Date of birth is unknown</h3>
+    }
 </div>
 </body>
 </html>
